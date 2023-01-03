@@ -6,7 +6,7 @@
 
 🔵 Original website: https://www.udemy.com/
 
-🔵 Demo:
+🔵 Demo: http://udemy-com-clone.vercel.app/
 
 🔵 Techs: HTML,CSS,JavaScript
 
