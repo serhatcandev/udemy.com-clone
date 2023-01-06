@@ -25,7 +25,6 @@ header {
     width: 100%;
     height: 72px;
     padding: 0 2.4rem;
-    /* border-bottom: 1px solid #d1d7dc; */
     font-family: "Udemy Sans", sans-serif;
 }
 
@@ -51,6 +50,7 @@ header .header-left span {
     line-height: 1.4;
     font-size: 1.4rem;
     padding: 0 1.2rem;
+    cursor: pointer;
 }
 
 header .header-left span:hover {
@@ -90,16 +90,15 @@ header .header-right ul li a:hover {
 .header-left .search-input {
     height: 4.8rem;
     width: 100%;
-    flex-grow: 1;
     padding: 15px 45px 15px 15px;
     background-color: #f7f9fa;
     border-radius: 999px;
-    border: 1px solid #1c1d1f;
+    border: 1px solid var(--black-color);
     margin: 0 1.2rem;
 }
 
 .header-left .search-input:focus {
-    border: 1px solid #1c1d1f;
+    border: 1px solid var(--black-color);
     outline: 0;
 }
 
@@ -135,7 +134,7 @@ header .header-right ul .profile {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: #1c1d1f;
+    background-color: var(--black-color);
     color: #fff;
     border-radius: 100%;
     padding: 1.5rem;
@@ -153,6 +152,7 @@ nav {
     border-top: 1px solid #d1d7dc;
     background: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    z-index: 1009;
     font-family: "Udemy Sans", sans-serif;
 }
 
@@ -189,19 +189,25 @@ main {
 
 main .menu-div {
     max-width: 134rem;
-    margin: 0 auto 2.8rem;
+    margin: 0 auto 5rem;
     position: relative;
 }
 
 main .menu-div-image {
     position: relative;
+    width: 100%;
+    height: 100%;
+}
+main .menu-div-image > img {
+    width: 100%;
+    height: 100%;
 }
 
 .menu-div-describe .box {
     max-width: 44rem;
     position: absolute;
-    top: 45%;
-    left: 22%;
+    top: 165px;
+    left: 295px;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 2.4rem;
@@ -230,6 +236,7 @@ main .menu-div-image {
     transform: translateY(-50%);
     cursor: pointer;
     transition: 0.1s all ease;
+    z-index: 1000;
 }
 
 .menu-div .menu-div-image .btn-right-arrow {
@@ -239,6 +246,7 @@ main .menu-div-image {
     transform: translateY(-50%);
     cursor: pointer;
     transition: 0.1s all ease;
+    z-index: 1000;
 }
 
 .menu-div .menu-div-image .btn-left-arrow:hover,
@@ -294,15 +302,15 @@ main .menu-div-image {
     margin-left: 1.5rem;
 }
 
-.container-learn .course-list {
+.container-learn .course-watched {
     display: flex;
     margin-top: 2rem;
 }
 
 .container-learn .course-profile {
     display: flex;
-    height: 152px;
-    width: 420px;
+    height: 100%;
+    width: 100%;
     height: auto;
     border: 1px solid #ccc;
     margin: 0 10px;
@@ -315,13 +323,44 @@ main .menu-div-image {
 }
 
 .container-learn .course-profile .left-side {
-    width: 120px;
-    height: 150px;
+    width: 12rem;
+    height: 15rem;
+    position: relative;
+}
+
+.container-learn .course-profile .left-side::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container-learn .course-profile .left-side::after {
+    content: "\f04b";
+    font-family: "FONT AWESOME 5 FREE";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 50%;
 }
 
 .container-learn .course-profile .left-side img {
-    width: 100%;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .container-learn .course-profile .right-side {
@@ -491,10 +530,9 @@ main .menu-div-image {
 
 .recommended-course {
     max-width: 134rem;
-    margin: 0 auto;
-    margin-top: 4rem;
+    margin: 0 auto 5rem;
     display: flex;
-    padding: 0 2.4rem;
+    padding: 0rem 2.4rem;
 }
 
 .recommended-course-title {
@@ -504,7 +542,7 @@ main .menu-div-image {
 }
 
 .recommended-course-title h1 {
-    margin: 0 0 2rem 2.4rem;
+    margin: 0 0 2rem 3.4rem;
     font-size: 2.4rem;
     font-weight: 600;
 }
@@ -517,6 +555,8 @@ main .menu-div-image {
 
 .course-list .course-img img {
     border: 1px solid #6a6f73;
+    width: 100%;
+    height: 100%;
 }
 
 .recommended-course-details .course-name {
@@ -554,7 +594,7 @@ main .menu-div-image {
     gap: 10px;
     font-weight: bold;
     font-size: 1.6rem;
-    color: #1c1d1f;
+    color: var(--black-color);
 }
 
 .recommended-course-details .course-price .old-price {
@@ -582,13 +622,13 @@ main .menu-div-image {
     display: flex;
     max-width: 134rem;
     margin: 0 auto;
-    padding: 0 2.4rem;
+    padding: 3.4rem;
 }
 
 .recommended-course-title-2 {
     max-width: 134rem;
-    margin: 4rem auto;
-    padding: 0 2.4rem;
+    margin: 2rem auto;
+    padding: 0 3.4rem;
 }
 
 .recommended-course-title-2 h2 {
@@ -612,7 +652,7 @@ main .menu-div-image {
 .recommended-subject-title {
     max-width: 134rem;
     margin: 4rem auto;
-    padding: 0 2.4rem;
+    padding: 0 3.4rem;
 }
 
 .recommended-subject-title h2 {
@@ -637,7 +677,7 @@ main .menu-div-image {
     font-size: 1.4rem;
     min-height: 5.6rem;
     font-weight: 700;
-    color: #1c1d1f;
+    color: var(--black-color);
     cursor: pointer;
     transition: 0.3s all ease;
 }
@@ -652,7 +692,7 @@ main .menu-div-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1c1d1f;
+    background: var(--black-color);
     border-top: 1px solid #3e4143;
     color: #fff;
     padding: 2rem 4.8rem;
@@ -690,7 +730,7 @@ main .menu-div-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1c1d1f;
+    background: var(--black-color);
     border-top: 1px solid #3e4143;
     color: #fff;
     padding: 2rem 4.8rem;
@@ -710,17 +750,26 @@ main .menu-div-image {
     text-decoration: underline;
 }
 
+.footer-col-2-right {
+    display: flex;
+}
+
 .footer-col-2-right img {
     margin: 0 15px;
 }
 
 .footer-col-3 {
     display: flex;
-    gap: 15rem;
-    background: #1c1d1f;
+    justify-content: space-between;
+    background: var(--black-color);
     border-top: 1px solid #3e4143;
     color: #fff;
     padding: 2rem 4.8rem;
+}
+
+.footer-col-3 div {
+    display: flex;
+    gap: 120px;
 }
 
 .footer-col-3 ul li {
@@ -736,6 +785,48 @@ main .menu-div-image {
 
 .footer-col-3 ul li a:hover {
     text-decoration: underline;
+}
+
+.footer-col-3-right div button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--black-color);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: 1px solid #fff;
+    min-width: 14rem;
+    height: 4rem;
+    font-size: 1.45rem;
+    cursor: pointer;
+}
+
+.footer-col-3-right div button span {
+    font-size: 2rem;
+}
+
+.footer-col-3 button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.footer-col-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c1d1f;
+    color: #fff;
+    padding: 2rem 4.8rem;
+}
+
+.footer-col-4 .footer-col-4-left img {
+    height: 34px;
+    width: 91px;
+    color: wheat;
+    margin-top: 2rem;
+}
+
+.footer-col-4-right span {
+    font-size: 1.2rem;
 }
 
 .language {
@@ -760,21 +851,95 @@ main .menu-div-image {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-.footer-col-4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1c1d1f;
-    color: #fff;
-    padding: 2rem 4.8rem;
+@media screen and (max-width: 1123px) {
+    nav div ul li:nth-last-child(1) {
+        display: none;
+    }
 }
 
-.footer-col-4 .footer-col-4-left img {
-    height: 34px;
-    width: 91px;
-    color: wheat;
+@media screen and (max-width: 1081px) {
+    header .header-right ul li:nth-child(1) {
+        display: none;
+    }
 }
 
-.footer-col-4-right span {
-    font-size: 1.2rem;
+@media screen and (max-width: 930px) {
+    .footer-col-3 div {
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 921px) {
+    header .header-right ul li:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1055px) {
+    nav div ul li:nth-last-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 921px) {
+    nav div ul li:nth-last-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 826px) {
+    nav div ul li:nth-last-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .course-profile:nth-last-child(1) {
+        display: none;
+    }
+
+    .course-list:nth-last-child(1) {
+        display: none;
+    }
+    .footer-col-1 {
+        padding: 2rem 3.6rem;
+    }
+    .footer-col-2 {
+        padding: 2rem 3.6rem;
+    }
+
+    .footer-col-3 {
+        padding: 2rem 3.6rem;
+    }
+
+    .menu-div-image > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-div-describe .box {
+        top: 130px;
+        left: 250px;
+        max-width: 40rem;
+    }
+
+    .menu-div .menu-div-image .btn-right-arrow {
+        top: 15rem;
+    }
+
+    .menu-div .menu-div-image .btn-left-arrow {
+        top: 15rem;
+    }
+
+    .recommended-subject .recommended-subject-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .recommended-subject .recommended-subject-container .box:nth-last-child(1) {
+        display: none;
+    }
+
+    .recommended-subject .recommended-subject-container .box:nth-last-child(6) {
+        display: none;
+    }
 }
