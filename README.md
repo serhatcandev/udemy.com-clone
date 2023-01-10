@@ -12,7 +12,7 @@
 
 🔵 Summary: I made the clone version of the udemy site to improve myself in HTML,CSS and JavaScript.
 
-![image](https://user-images.githubusercontent.com/85739464/210354079-e08e8dfa-8785-4772-bd55-833b2821ef4b.png)
+![image](https://user-images.githubusercontent.com/85739464/211670610-70a044e2-337b-47bd-b124-463808606b55.png)
 
 
 
