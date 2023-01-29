@@ -12,7 +12,8 @@
 
 🔵 Summary: I made the clone version of the udemy site to improve myself in HTML,CSS and JavaScript.
 
-![image](https://user-images.githubusercontent.com/85739464/211670610-70a044e2-337b-47bd-b124-463808606b55.png)
+[screen-capture (2).webm](https://user-images.githubusercontent.com/85739464/215338960-28d5b5a3-f070-4fe6-a885-1c4d68997c87.webm)
+
 
 
 
