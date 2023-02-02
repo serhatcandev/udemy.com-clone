@@ -6,7 +6,7 @@
 
 🔵 Original website: https://www.udemy.com/
 
-🔵 Demo: http://udemy-com-clone.vercel.app/
+🔵 Demo: http://udemy-com-clone.vercel.app/ (Google detects a threat because I'm making the same site. If you click the ignore button, you can view the site.)
 
 🔵 Techs: HTML,CSS,JavaScript
 
