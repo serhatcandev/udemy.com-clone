@@ -8,7 +8,7 @@
 
 🔵 Demo: http://udemy-com-clone.vercel.app/ (Google detects a threat because I'm making the same site. If you click the ignore button, you can view the site.)
 
-🔵 Techs: HTML,CSS,JavaScript
+🔵 Techs: HTML and CSS.
 
 🔵 Summary: I made the clone version of the udemy site to improve myself in HTML,CSS and JavaScript.
 
